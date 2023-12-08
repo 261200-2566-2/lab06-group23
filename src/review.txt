@@ -1,0 +1,32 @@
+Code Review
+1.spellname เช่น explosion ใช้หลายรอบน่าจะตั้งเป็นตัวแปร
+2.
+public void receiveDamage(double damage) {
+        if (equippedSkullCrystal != null) {
+            damage = 0;
+        } else {
+            damage -= damageReduction;
+            damage -= specialDefenseDamage;
+            damage -= nextDamageReduction;
+            damage = Math.max(0, damage);
+            currentHP -= damage;
+        }
+    }
+อยากแก้เป็น
+public void receiveDamage(double damage) {
+        if (equippedSkullCrystal != null) {
+            damage = 0;
+        } else {
+            damage = calculateEffectiveDamage(damage);
+            currentHP -= damage;
+        }
+    }
+
+    private double calculateEffectiveDamage(double damage) {
+        damage -= damageReduction;
+        damage -= specialDefenseDamage;
+        damage -= nextDamageReduction;
+        return Math.max(0, damage);
+    }
+3.add null check ใน method
+4.setDamageReduction(double reduction) and setNextDamageReduction(double reduction) ทำงานเหมือนกันเขียนอันเดียวพอ
