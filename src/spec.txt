@@ -1,0 +1,92 @@
+Spec of Method
+
+void upgradeSpell(String spellName, Mage target)
+cast upgraded spell that deal damage to target
+requires : spellName and target are not null
+effects : target receive damage and print activate notification
+
+
+void upMagicStat()
+get extra mana and spellpower
+effects : mana and spellpower increase
+
+
+void castNaturalPower(String naturalElement, Mage target)
+druid cast natural element that deal damage to target
+requires : naturalElement and target are not null
+effects : target receive damage and print spell activate notification
+
+
+void castAttackSpell(String spellName, Mage target)
+cast attack spell that deal damage to target
+requires : spellName and target are not null
+effects : target receive damage and print spell activate notification
+
+
+void castDefenseSpell(String spellName)
+cast defense spell
+requires : spellName is not null
+effects : your damage taken is reduce and print spell activate notification
+
+
+void castSpecialAttackSpell(String spellName, Mage target)
+cast special spell that deal damage to target
+requires : equippedMagicWand, specialSpellName are not null and target are not null
+effects : target receive damage and print spell activate notification
+
+
+double getCurrentHP()
+get current hp
+return : current hp
+
+
+void receiveDamage(double damage)
+calculate damage receive
+effects : hp reduce by calculate damage
+
+
+void setDamageReduction(double reduction)
+reduce damage receive
+
+
+void setNextDamageReduction(double reduction)
+reduce damage receive
+
+
+void castSpecialDefenseSpell(String specialSpellName)
+cast special defense spell
+requires : equippedMagicWand and specialSpellName are not null
+effects : your damage taken is reduce and print spell activate notification
+
+
+void equippedSkullCrystal(SkullCrystal skullCrystal)
+equip skull crystal
+
+
+void equippedMagicWand(MagicWand magicWand)
+equip magic wand
+
+
+void equippedBookOfSpell(BookOfSpell bookOfSpell)
+equip book of spell
+
+
+void cancelEnemyAttack()
+enemy next attack damage = 0
+effects : you receive no damage
+
+
+void summonSpirit(String spiritName)
+summon spirit
+
+
+void spiritAttack(String spiritName, Mage target)
+spirit attack target
+requires : spiritName and target are not null
+effects : target receive damage and print attack notification
+
+
+void castSpellTwice(String spellName, Mage target)
+cast attack spell that deal damage to target twice
+requires : spellName and target are not null
+effects : target receive damage and print spell activate notification
